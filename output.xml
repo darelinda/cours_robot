@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-22T12:17:33.713186" rpa="false" schemaversion="5">
+<suite id="s1" name="Test02" source="C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test02.robot">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-02-22T12:17:33.741188" level="INFO">Fin de test</msg>
+<arg>Fin de test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.741188" elapsed="0.000000"/>
+</kw>
+<test id="s1-t1" name="Test creation de fichier" line="8">
+<kw name="File Should Not Exist" owner="OperatingSystem" type="SETUP">
+<msg time="2024-02-22T12:17:33.742187" level="INFO" html="true">File '&lt;a href="file://C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt"&gt;C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt&lt;/a&gt;' does not exist.</msg>
+<arg>test_fichier.txt</arg>
+<arg>msg=Le fichier arait du etre créé</arg>
+<doc>Fails if the given path points to an existing file.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.741188" elapsed="0.000999"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2024-02-22T12:17:33.742187" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt"&gt;C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt&lt;/a&gt;'.</msg>
+<arg>test_fichier.txt</arg>
+<arg>Ceci est le contenu du fichier</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.742187" elapsed="0.000000"/>
+</kw>
+<kw name="File Should Exist" owner="OperatingSystem">
+<msg time="2024-02-22T12:17:33.743187" level="INFO" html="true">File '&lt;a href="file://C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt"&gt;C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt&lt;/a&gt;' exists.</msg>
+<arg>test_fichier.txt</arg>
+<arg>msg=Le fichier arait du etre créé</arg>
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.743187" elapsed="0.000000"/>
+</kw>
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-02-22T12:17:33.743187" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt"&gt;C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt&lt;/a&gt;'.</msg>
+<msg time="2024-02-22T12:17:33.744188" level="INFO">${contenu} = Ceci est le contenu du fichier</msg>
+<var>${contenu}</var>
+<arg>test_fichier.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.743187" elapsed="0.001001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${contenu}</arg>
+<arg>Ceci est le contenu du fichier</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.744188" elapsed="0.000000"/>
+</kw>
+<kw name="Mon Teardown personnalisé" type="TEARDOWN">
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-02-22T12:17:33.745185" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt"&gt;C:\Users\dtaguetieu2023\PycharmProjects\cours_robot\test_fichier.txt&lt;/a&gt;'.</msg>
+<arg>test_fichier.txt</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.745185" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-22T12:17:33.746188" level="INFO">Fichier nettoyé</msg>
+<arg>Fichier nettoyé</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.745185" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2024-02-22T12:17:33.745185" elapsed="0.001003"/>
+</kw>
+<doc>Suite de teste manipulant des fichiers</doc>
+<status status="PASS" start="2024-02-22T12:17:33.741188" elapsed="0.005000"/>
+</test>
+<test id="s1-t2" name="Test Setup 1" line="22">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-02-22T12:17:33.747185" level="INFO">Debut de test</msg>
+<arg>Debut de test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.747185" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-22T12:17:33.747185" level="INFO">test setup 1</msg>
+<arg>test setup 1</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.747185" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-22T12:17:33.747185" elapsed="0.001000"/>
+</test>
+<test id="s1-t3" name="Test Setup 2" line="24">
+<kw name="Log" owner="BuiltIn" type="SETUP">
+<msg time="2024-02-22T12:17:33.749188" level="INFO">Debut de test</msg>
+<arg>Debut de test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.749188" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-22T12:17:33.749188" level="INFO">test setup 2</msg>
+<arg>test setup 2</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.749188" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-22T12:17:33.748185" elapsed="0.001003"/>
+</test>
+<kw name="Log" owner="BuiltIn" type="TEARDOWN">
+<msg time="2024-02-22T12:17:33.750185" level="INFO">Fin de la suite</msg>
+<arg>Fin de la suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-22T12:17:33.750185" elapsed="0.001004"/>
+</kw>
+<doc>Suite de teste manipulant des fichiers</doc>
+<status status="PASS" start="2024-02-22T12:17:33.715186" elapsed="0.036003"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Test02">Test02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
